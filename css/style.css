@@ -1,0 +1,51 @@
+
+body {margin: 0 auto;}
+header{
+    width: 100%;
+}
+
+.logo{
+    margin: 40px 0 10px 40px;
+
+}
+
+.container-box{
+    margin:  0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow:  row wrap;
+}
+
+.left-box{
+    background-color: aqua;
+}
+
+.note{
+    display: block;
+}
+.note::before{
+    display: inline-block;
+    content: " ";
+    height: 16px;
+    width: 16px;
+    background-image: url(../img/bi_exclamation-circle-fill.png);
+    background-repeat: no-repeat;
+}
+.note span{
+    margin-bottom: 2px;
+}
+.left-box textarea{
+    resize: none;
+    color: #0A3871;
+}
+.right-box{
+    background-color: blue;
+
+}
+
+body main{
+
+    margin: 0 auto;
+    background-color: #f3f5fc;
+}
+
