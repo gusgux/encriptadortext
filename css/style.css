@@ -1,6 +1,20 @@
 
-body {margin: 0 auto;}
-header{
+*{
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 150%;
+
+}
+body {
+
+    margin: 0 auto;
+    background: linear-gradient(to bottom,#0b37d4 0%,#0cd31d 100%);
+
+}
+
+main {
     width: 100%;
 }
 
@@ -12,40 +26,170 @@ header{
 .container-box{
     margin:  0 auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     -ms-flex-flow:  row wrap;
+    gap: 10px;
 }
 
-.left-box{
-    background-color: aqua;
-}
 
-.note{
-    display: block;
-}
-.note::before{
-    display: inline-block;
-    content: " ";
-    height: 16px;
-    width: 16px;
-    background-image: url(../img/bi_exclamation-circle-fill.png);
-    background-repeat: no-repeat;
-}
-.note span{
-    margin-bottom: 2px;
-}
-.left-box textarea{
+.left-box textarea,.right-box textarea{
+
+    border: none;
     resize: none;
+    background:none;
+    color: #0A3871;
+    text-transform: lowercase;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 150%;
+    border-radius: 32px;
+    padding: 20px;
+
+
+}
+
+.left-box textarea::placeholder,.right-box textarea::placeholder{
     color: #0A3871;
 }
-.right-box{
-    background-color: blue;
+.left-box textarea:focus,.right-box textarea:focus{
+
+    outline: none;
+}
+
+
+
+.note{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin :5px 0;
+    gap: 8px;
+    
+
+
+}
+.note img{
+    height: 16px;
+    width: 16px;
+}
+
+.note span{
+    /*line-height: 18px;*/
+    font-size: 12px;
+    color: #495057;
+    line-height: 150%;
+    opacity: 0.8;
+}
+.button{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    justify-items: flex-start;
+    gap: 8px;
+    
+}
+
+/*.button button{
+    
+    display: flex;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+}
+*/
+.button-encode{
+    border: none;
+    background-color: #0A3871;
+    color:  #D8DFE8;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+}
+.button-encode:hover{
+    background:linear-gradient(to bottom, #0A3871 5%, #072B61 100%);
+}
+.button-encode:active{
+    border-color: black;
+    position:relative;
+	top:1px;
+}
+
+.button-decode{
+
+    border: solid 0.16vh #0A3871 ;
+    background-color: #D8DFE8;
+    color:  #0A3871;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 19px;
+
 
 }
 
-body main{
+.button-decode:hover{
+    background:linear-gradient(to bottom, #D8DFE8 5%, #EFF1FA 100%);
+}
+.button-decode:active{
+    position:relative;
+	top:1px;
+}
 
-    margin: 0 auto;
-    background-color: #f3f5fc;
+
+
+.right-box{
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    left: 2vh;
+
+}
+
+.right-box textarea{
+    background:no-repeat url(../img/muneco.png);
+    font-size: 24px;
+    color: #495057;
+}
+
+.button .button-copy{
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+}
+
+.button .button-copy:hover{
+    background: #EFF1FA;
+}
+.button .button-copy:active{
+    position: relative;
+    top:1px
+
+}
+
+footer{
+
+    color: #072B61;
+    background-color:black;
+    height: 10vh;
+    text-align: center;
 }
 
