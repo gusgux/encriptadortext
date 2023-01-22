@@ -10,7 +10,7 @@
 body {
 
     margin: 0 auto;
-    background: linear-gradient(to bottom,#0b37d4 0%,#0cd31d 100%);
+    background: linear-gradient(to bottom, #EFF1FA 5%,#83acdd 100%);;
 
 }
 
@@ -163,6 +163,9 @@ main {
     color: #495057;
 }
 
+#btn-copy{
+    display:none;
+}
 .button .button-copy{
     cursor: pointer;
     box-sizing: border-box;
