@@ -28,7 +28,7 @@ main {
 .container-box{
     margin:  0 auto;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     -ms-flex-flow:  row wrap;
     justify-content: space-evenly;
 }
@@ -179,7 +179,7 @@ main {
     display:none;
     margin-top: 3vw;
 }
-.button .button-copy{
+.button-copy{
     cursor: pointer;
     box-sizing: border-box;
     color: #0A3871;
@@ -225,4 +225,29 @@ footer{
     font-size: 200%;
     text-align: center;
 }
+
+
+@media screen and (max-width:480px){
+
+    main {margin: 100vw;}
+    .right-box,.left-box{
+        width: 90vw;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+    #input-text,.right-box textarea{
+        width: 80vw;
+    }
+
+    .note p{
+        font-size: 15px;
+    }
+
+    .button-encode,.button-decode,.button-copy{
+
+        width: 80vw;
+    }
+    
+}
+    
 
