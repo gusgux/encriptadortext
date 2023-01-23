@@ -15,16 +15,17 @@ function encodeTex() {
     vowelCode.set("u","ufat");
     const code = ["enter","imes","ober","ufat","ai"];
     const uncode =["e","i","o","u","a"];
-  
 
     
     text2Encode=text2Encode.trim().replaceAll(/\s+/g," ");
+    
     //text2Encode=text2Encode.trim().split(/\s+/g);
     //text2Encode.forEach(value => txtInput.push(value.split("")));
     
     text2Decode.value="";   
 
     if(isChecked(text2Encode)){
+        document.getElementById("text-right").style.display="none";
         btnCopy.style.display="flex";
         text2Decode .style.background="none";
 
@@ -75,6 +76,7 @@ function decodeTxt(){
     encodeTex=encodeTex.trim().replaceAll(/\s+/g," ");
     
     if (isChecked(encodeTex)) {
+        document.getElementById("text-right").style.display="none";
         btnCopy.style.display="flex";
         decodeTex.style.background="none";
         for (let i = 0; i<uncode.length; i++){

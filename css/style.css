@@ -1,6 +1,5 @@
 
 *{
-    margin: 0 auto;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 100%;
@@ -9,17 +8,20 @@
 }
 body {
 
-    margin: 0 auto;
-    background: linear-gradient(to bottom, #EFF1FA 5%,#83acdd 100%);;
+    background: linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);
 
 }
-
+header{
+    width: 98vw;
+    margin: 0 auto;
+}
 main {
-    width: 100%;
+    margin: 0 auto;
+    width: 90vw;
 }
 
 .logo{
-    margin: 40px 0 10px 40px;
+    margin: 0.8vw 0vw;
 
 }
 
@@ -28,12 +30,20 @@ main {
     display: flex;
     flex-flow: row nowrap;
     -ms-flex-flow:  row wrap;
-    gap: 10px;
+    justify-content: space-evenly;
 }
 
+.left-box{
+    width:50vw;
+    margin-left:1.5vw;
+}
+#input-text{
+    border:solid 0.1vw #072B61;
+    width: 45vw;
+}
 
 .left-box textarea,.right-box textarea{
-
+    display: block;
     border: none;
     resize: none;
     background:none;
@@ -44,9 +54,12 @@ main {
     line-height: 150%;
     border-radius: 32px;
     padding: 20px;
+    height: 19.5rem;
+
 
 
 }
+
 
 .left-box textarea::placeholder,.right-box textarea::placeholder{
     color: #0A3871;
@@ -74,10 +87,11 @@ main {
     width: 16px;
 }
 
-.note span{
+.note p{
     /*line-height: 18px;*/
-    font-size: 12px;
-    color: #495057;
+    font-size: 18px;
+    color: black;
+    font-style: italic;
     line-height: 150%;
     opacity: 0.8;
 }
@@ -102,17 +116,16 @@ main {
 }
 */
 .button-encode{
-    border: none;
+    border: solid 0.08vh #0A3871 ;
     background-color: #0A3871;
     color:  #D8DFE8;
     cursor: pointer;
-    text-align: center;
     box-sizing: border-box;
     padding: 24px;
     border-radius: 24px;
     text-align: center;
-    font-size: 16px;
     line-height: 19px;
+    width: 20vw;
 }
 .button-encode:hover{
     background:linear-gradient(to bottom, #0A3871 5%, #072B61 100%);
@@ -125,16 +138,15 @@ main {
 
 .button-decode{
 
-    border: solid 0.16vh #0A3871 ;
+    border: solid 0.08vh #0A3871 ;
     background-color: #D8DFE8;
     color:  #0A3871;
     cursor: pointer;
-    text-align: center;
     box-sizing: border-box;
     padding: 24px;
     border-radius: 24px;
-    font-size: 16px;
     line-height: 19px;
+    width: 20vw;
 
 
 }
@@ -150,21 +162,22 @@ main {
 
 
 .right-box{
-    background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    background:linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
-    left: 2vh;
+    width: 30vw;
 
 }
 
 .right-box textarea{
     background:no-repeat url(../img/muneco.png);
     font-size: 24px;
-    color: #495057;
+    color: black;
 }
 
 #btn-copy{
     display:none;
+    margin-top: 3vw;
 }
 .button .button-copy{
     cursor: pointer;
@@ -173,9 +186,9 @@ main {
     border: 1px solid #0A3871;
     border-radius: 24px;
     padding: 24px;
-    font-size: 16px;
     line-height: 19px;
     text-align: center;
+    width: 20vw;
 
 }
 
@@ -187,12 +200,29 @@ main {
     top:1px
 
 }
+.title-right{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    font-weight: bold;
+}
+.note-right{
+
+    line-height: 150%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    
+}
 
 footer{
-
-    color: #072B61;
-    background-color:black;
-    height: 10vh;
+    width: 98vw;
+    margin: 2vw 0;
+    color: #072b61;
+    font-size: 200%;
     text-align: center;
 }
 

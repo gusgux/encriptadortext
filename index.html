@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
-    
     <title>Document</title>
 </head>
 
@@ -21,12 +20,12 @@
     <main class="container-box">
         <section class="left-box">
 
-        <textarea id="input-text" name="text2Encode" cols="30" rows="10" placeholder="ingrese un texto">gato</textarea>
+        <textarea id="input-text" name="text2Encode"  rows="10" placeholder="ingrese un texto"></textarea>
 
         <div class="note" >
 
             <img src="img/bi_exclamation-circle-fill.png" alt="icon-exclamation">
-            <span>solo letras  minusculas y sin acentos o simbolos</span>
+            <p>solo letras  minusculas y sin acentos o simbolos</p>
 
         </div>
         <div class="button">
@@ -40,8 +39,11 @@
         </section>
 
         <section class="right-box">
-            <textarea id="output-text" name="text2decode"  cols="30" rows="10"></textarea>
-
+            <textarea id="output-text" name="text2decode"  rows="10"></textarea>
+            <div id="text-right">
+                <h6 class="title-right">Ningún mensaje fue <br>encontrado</h6>
+                <p class="note-right">Ingresa el texto que desees encriptar o <br>desencriptar.</p>
+            </div>
             <div class="button" id="btn-copy"><button class="button-copy">Copiar</button>
             </div>
             
