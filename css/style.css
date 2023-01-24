@@ -171,6 +171,8 @@ main {
 
 .right-box textarea{
     background:no-repeat url(../img/muneco.png);
+    background-size: 30vw;
+
     font-size: 24px;
     color: black;
 }
@@ -225,7 +227,7 @@ footer{
     font-size: 200%;
     text-align: center;
 }
-
+ /* css for mobiles */
 
 @media (max-width:480px){
 
@@ -237,6 +239,7 @@ footer{
     }
     #input-text,.right-box textarea{
         width: 80vw;
+        background-size: 80vw;
     }
 
     .note p{
@@ -249,5 +252,60 @@ footer{
     }
     
 }
+
+ /* css for table/ipads */
+
+@media (min-width:480px) and (max-width:840px){
+
+    main {margin: 100vw;}
+    .right-box,.left-box{
+        width: 90vw;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+    #input-text{
+        width: 84vw;
+    }
+
+    .right-box textarea{
+        width: 84vw;
+        background-size: 84vw;
+    }
+
+    .note p{
+        font-size: 15px;
+    }
+
+    .button-encode,.button-decode{
+
+        width: 40vw;
+    }
+    .button-copy{
+
+        width: 80vw;
+    }
+}
+/* css for surface    */
+@media (min-width:840px) and (max-width:1200px){
+
+    .left-box{
+        width: 45vw;
+    }
+    #input-text{
+        width: 40vw;
+        
+    }
+    .right-box {
+        width: 40vw;
+    }
+
+    .right-box textarea{
+        width: 38vw;
+        background-size: 38vw;
+    }
+
+
+
     
 
+}
