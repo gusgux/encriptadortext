@@ -1,82 +1,52 @@
 
+let rawtext = document.getElementById("input-text");
+let outputText  = document.getElementById("output-text");
+let btnCopy = document.getElementById("btn-copy");
+let noteLeft = document.getElementById("text-moving");
+let noteRight = document.getElementById("text-right");
+let encodeInput = document.getElementById("btn-encode");
+let decodeoutput = document.getElementById("btn-decode");
+const code = ["enter","imes","ober","ai","ufat"];
+const uncode = ["e","i","o","a","u"];
+
 
 function encodeTex() {
 
-    let text2Encode = document.getElementById("input-text").value;
-    let text2Decode = document.getElementById("output-text");
-    let btnCopy = document.getElementById("btn-copy");
-    let txtInput = [];
-    let txtEncode =[];
-    const vowelCode = new Map();
-    vowelCode.set("a","ai");
-    vowelCode.set("e","enter");
-    vowelCode.set("i","imes");
-    vowelCode.set("o","ober");
-    vowelCode.set("u","ufat");
-    const code = ["enter","imes","ober","ufat","ai"];
-    const uncode =["e","i","o","u","a"];
+    let text = rawtext.value.trim().replaceAll(/\s+/g," ");
+    let decodeTex = outputText;
 
-    
-    text2Encode=text2Encode.trim().replaceAll(/\s+/g," ");
-    
-    //text2Encode=text2Encode.trim().split(/\s+/g);
-    //text2Encode.forEach(value => txtInput.push(value.split("")));
-    
-    text2Decode.value="";   
+    decodeTex.value="";   
+    noteLeft.className="";
 
-    if(isChecked(text2Encode)){
-        document.getElementById("text-right").style.display="none";
+    if(isChecked(text)){
+        noteRight.style.display="none";
         btnCopy.style.display="flex";
-        text2Decode .style.background="none";
+        decodeTex.style.background="none";
 
         for (let i = 0; i<uncode.length; i++){
 
-            text2Encode=text2Encode.replaceAll(uncode[i],code[i]);
+            text=text.replaceAll(uncode[i],code[i]);
             
         }
-        text2Decode.value+=text2Encode;
+        decodeTex.value+=text;
     }else{
-        text2Decode.value+="";
+        text.value="";
+        noteLeft.className="show";
         alert("solo minusculas sin acentos o simbolos");
 
     }
-    /*for (const txt of txtInput) {
-
-        for (let i = 0; i < txt.length; i++) {
-
-            if(txt[i]=='a' || txt[i]=='e' || txt[i]=='i' || txt[i]=='o' || txt[i]=='u') {
-
-                txtEncode.push(vowelCode.get(txt[i]));
-            }
-            else {
-
-                txtEncode.push(txt[i]);
-
-            }       
-        }  
-        txtEncode.push(" ");
-    }*/
-  
-
-
-    //vowelCode.forEach((value, key, map) => {console.log(key,value);} );
-    
-     
-    
 }
 
 function decodeTxt(){
-    let encodeTex = document.getElementById("input-text").value;
-    let decodeTex = document.getElementById("output-text");
-    let btnCopy = document.getElementById("btn-copy");
-    const uncode =["a","e","i","o","u"];
-    const code = ["ai","enter","imes","ober","ufat"];
-    decodeTex.value="";   
+    let encodeTex = rawtext.value.trim().replaceAll(/\s+/g," ");
+    let decodeTex = outputText;
 
-    encodeTex=encodeTex.trim().replaceAll(/\s+/g," ");
+    decodeTex.value="";
+    noteLeft.className=""; 
+
     
     if (isChecked(encodeTex)) {
-        document.getElementById("text-right").style.display="none";
+        noteRight.style.display="none";
         btnCopy.style.display="flex";
         decodeTex.style.background="none";
         for (let i = 0; i<uncode.length; i++){
@@ -85,51 +55,33 @@ function decodeTxt(){
     
     
         }
-        decodeTex.value+=encodeTex;
+        decodeTex.value=encodeTex;
     } else {
-        decodeTex.value+="";
+        decodeTex.value="";
+        noteLeft.className="show";
+
         alert("solo minusculas sin acentos o simbolos");
     }
-
-
-
-
-
-    console.log(encodeTex);
-    //console.log(encodeTex);
-
-
-  
-
-
 
 }
 
 function copy(){
-    let encodeTex = document.getElementById("input-text");
-    let decodeTex = document.getElementById("output-text");
+    let encodeTex = rawtext;
+    let decodeTex = outputText;
     encodeTex.value="";
     decodeTex.select();
     document.execCommand('copy');
-    encodeTex.value+=decodeTex.value;
+    encodeTex.value=decodeTex.value;
     alert("Copiado!");
-
-
-
-
-
-
 }
 function isChecked(text) {
     return  !/[^a-z\sñ]/.test(text);    
 }
-let encodeInput = document.getElementById("btn-encode");
-encodeInput.onclick = encodeTex;
 
-let decodeoutput = document.getElementById("btn-decode");
-decodeoutput .onclick = decodeTxt;
 
-let btn_Copy= document.getElementById("btn-copy");
-btn_Copy.onclick = copy;
+encodeInput.addEventListener("click",encodeTex);
+decodeoutput.addEventListener("click",decodeTxt);
+btnCopy.addEventListener("click",copy);
+
 
  

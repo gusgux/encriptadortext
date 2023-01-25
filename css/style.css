@@ -7,8 +7,9 @@
 
 }
 body {
-
-    background: linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);
+    background: url(../img/Shooting-Star-Background-in-Pure-CSS-1.gif);
+    background-size: cover;
+    /*background: linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);*/
 
 }
 header{
@@ -48,7 +49,6 @@ main {
     resize: none;
     background:none;
     color: #0A3871;
-    text-transform: lowercase;
     font-style: normal;
     font-size: 32px;
     line-height: 150%;
@@ -88,13 +88,39 @@ main {
 }
 
 .note p{
-    /*line-height: 18px;*/
     font-size: 18px;
     color: black;
     font-style: italic;
     line-height: 150%;
     opacity: 0.8;
 }
+
+#text-moving.show{
+    color: red;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+    animation: horizontal-shaking 0.6s 2;
+        
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100%{ transform: translateX(0); }
+  }
+
+     
+
+
 .button{
     display: flex;
     flex-flow: row wrap;
@@ -162,10 +188,11 @@ main {
 
 
 .right-box{
-    background:linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);
+    /*background:linear-gradient(to top, #0cdbe2 0%,#1d9c67 100%);*/
     box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     width: 30vw;
+    
 
 }
 
