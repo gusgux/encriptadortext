@@ -15,10 +15,11 @@ function encodeTex() {
     let text = rawtext.value.trim().replaceAll(/\s+/g," ");
     let decodeTex = outputText;
 
-    decodeTex.value="";   
-    noteLeft.className="";
+    
 
     if(isChecked(text)){
+        decodeTex.value="";   
+        noteLeft.className="";
         noteRight.style.display="none";
         btnCopy.style.display="flex";
         decodeTex.style.background="none";
@@ -41,11 +42,11 @@ function decodeTxt(){
     let encodeTex = rawtext.value.trim().replaceAll(/\s+/g," ");
     let decodeTex = outputText;
 
-    decodeTex.value="";
-    noteLeft.className=""; 
-
+    
     
     if (isChecked(encodeTex)) {
+        decodeTex.value="";
+        noteLeft.className=""; 
         noteRight.style.display="none";
         btnCopy.style.display="flex";
         decodeTex.style.background="none";
