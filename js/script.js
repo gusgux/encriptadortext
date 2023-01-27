@@ -1,4 +1,3 @@
-
 let rawtext = document.getElementById("input-text");
 let outputText  = document.getElementById("output-text");
 let btnCopy = document.getElementById("btn-copy");
@@ -22,8 +21,7 @@ function encodeTex() {
         noteLeft.className="";
         noteRight.style.display="none";
         btnCopy.style.display="flex";
-        decodeTex.style.background="none";
-
+        decodeTex.className="right-textarea";
         for (let i = 0; i<uncode.length; i++){
 
             text=text.replaceAll(uncode[i],code[i]);
@@ -49,7 +47,7 @@ function decodeTxt(){
         noteLeft.className=""; 
         noteRight.style.display="none";
         btnCopy.style.display="flex";
-        decodeTex.style.background="none";
+        decodeTex.className="right-textarea";
         for (let i = 0; i<uncode.length; i++){
         
             encodeTex=encodeTex.replaceAll(code[i],uncode[i]);
@@ -69,6 +67,7 @@ function decodeTxt(){
 function copy(){
     let encodeTex = rawtext;
     let decodeTex = outputText;
+
     encodeTex.value="";
     decodeTex.select();
     document.execCommand('copy');

@@ -42,12 +42,11 @@ main {
     border:solid 0.1vw #072B61;
     width: 45vw;
 }
-
+.left-box textarea{background: none;}
 .left-box textarea,.right-box textarea{
     display: block;
     border: none;
     resize: none;
-    background:none;
     color: #0A3871;
     font-style: normal;
     font-size: 32px;
@@ -181,16 +180,12 @@ main {
 }
 
 
-
 .right-box{
     box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     width: 30vw;
     border: 1px solid purple;
-    background: linear-gradient(90deg, #007cf0, #00dfd8);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; 
-    background-clip: text;
+
 
 }
 
@@ -202,6 +197,13 @@ main {
     color: black;
 }
 
+footer,#text-right,.right-box .right-textarea{
+    background: linear-gradient(90deg, #7ae9b5, #00dfd8);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;  
+    background-clip: text;}
+
+
 #btn-copy{
     display:none;
     margin-top: 3vw;
@@ -209,7 +211,7 @@ main {
 .button-copy{
     cursor: pointer;
     box-sizing: border-box;
-    color: #0A3871;
+    color: #00dfd8;
     border: 1px solid #0A3871;
     border-radius: 24px;
     padding: 24px;
